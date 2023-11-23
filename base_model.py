@@ -17,7 +17,7 @@ class Task:
         self.task = task
         self.date = datetime.now().strftime("%Y-%m-%d")
         self.time = datetime.now().strftime("%H:%M:%S")
-        print("This is the base css")
+ 
 
     def to_dict(self):
         """
@@ -32,6 +32,7 @@ class Task:
         return dict_object
 if __name__ == '__main__':
     task = Task(sys.argv[1], sys.argv[2] )
-    print(task.session)
-    print(task.to_dict())
+    # converting the object to a dictionary
+    task.to_dict()
+    # Saving the state of the object 
     FileStorage.save(task.to_dict())
