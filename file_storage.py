@@ -19,6 +19,6 @@ class FileStorage:
         """
         item = []
         item.append(self)
-        with open("Dimka.json", "w") as file:
+        with open("dimka.json", "w") as file:
             json.dump(item, file, indent = 2)
 
