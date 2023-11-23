@@ -12,3 +12,13 @@ class FileStorage:
 
         print("i Store the task")
 
+    @staticmethod
+    def save(self):
+        """
+        save the contain of the object in a json file
+        """
+        item = []
+        item.append(self)
+        with open("Dimka.json", "w") as file:
+            json.dump(item, file, indent = 2)
+
